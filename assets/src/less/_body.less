@@ -1,0 +1,141 @@
+
+body {
+	background: @mainBg;
+	color:@mainColor;
+	&.slideUp {
+		transition: all 0.6s @easeOutSine;
+		.navbar {
+			transition: all 0.6s @easeOutSine;
+		}
+	}
+}
+.navbar-default {
+	background: transparent;
+	border: none;
+	padding-top: 15px;
+}
+
+.logo {
+	    max-width: 55px;
+    	padding: 0px;
+    	display: inline-block;
+    	height: auto;
+	img {
+		width: 100%;
+	}
+}
+.jumbotron {
+	display: table;
+    vertical-align: middle;
+    width: 100%;
+	background-color: #004e9e;
+	background-attachment: fixed;
+    color: #fff;
+    border-radius: 0px;
+    position: relative;
+    min-height: 670px;
+    background: radial-gradient(circle, transparent 80%, #0d334a 95%),linear-gradient(to right, #008affcf, #2c95ef),var(--image2);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: var(--blend-top, normal),var(--blend-bottom, multiply),normal;
+    --image: url(../images/work-desk__dustin-lee.jpg);
+    --image2: url(../images/work-desk__dustin-lee.jpg);
+    --color-v: #20303a;
+    --color: #337ab7;
+	&:before {
+		position: absolute;
+		background: #000;
+	    height: 100%;
+	    content: " ";
+	    display: block;
+	    top: 0px;
+	    z-index: 99;
+	    width: 100%;
+	    left: 0px;
+	    opacity: 0.5;
+	}
+
+	
+	.lead-info {
+		position: relative;
+		z-index: 999;
+		vertical-align: middle;
+    	display: table-cell;
+	}
+}
+
+.section {
+	padding-top: 15px;
+    padding-bottom: 15px;
+    display: block;
+}
+.center-align {
+	text-align:center;
+}
+.right-align {
+	text-align:right;	
+}
+
+.inner-box {
+	padding: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    i {
+    	position: absolute;
+	    right: 25px;
+	    top: 30px;
+	    color: #a6a7ab;
+    }
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  &>[class*="col-"] {
+	  margin-bottom: 30px;
+	}
+	&.clear-bottom {
+		&>[class*="col-"] {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+footer {
+	background: #050328;
+	color: #8e8ca8;
+}
+.subscribe-box {
+	position: fixed;
+    top: 100%;
+    width: 50%;
+    max-width: 600px;
+    z-index: 9999;
+    background: rgba(0, 96, 163, 0.8);
+    color: #fff;
+    padding: 15px;
+    @media (max-width: @screen-sm-max) {
+    	width: 100%;
+    }
+    .form-group {
+    	width: 80%;
+    }
+    .form-group,
+    .btn {
+    	display: inline-block;
+    }
+    .close-box {
+    	position: absolute;
+    	right: 10px;
+    	top: 10px;
+    	cursor: pointer;
+    }
+    &.slideUp {
+    	transition: all 0.6s @easeOutSine;
+    }
+}
+@media (min-width: @screen-md-min) {
+	.navbar>.container .navbar-brand, 
+	.navbar>.container-fluid .navbar-brand {
+	    margin-left: 0px;
+	}
+}

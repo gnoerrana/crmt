@@ -1,0 +1,55 @@
+.btn {
+	border-radius: 2px;
+	border-width: 2px;
+	&.btn-lg {
+		font-size: 12px;
+    	padding: 12px 30px;
+	}
+	&.btn-primary {
+		background: #017ac1;
+		border-color: #017ac1;
+	}
+}
+.btn-outline-white {
+	background: transparent;
+	border-width: 2px;
+	border-color: #fff;
+	color: #fff;
+	&:hover {
+		background: #fff;
+		color: @blueColor;
+	}
+}
+.jumbotron {
+	text-align: center;
+}
+.bordered-light {
+		border: thin solid #dadada;
+	    box-shadow: 1.2px 1.2px 0px #ffffff;
+		position: relative;
+		height: 100%;
+	&:before {
+		top: 0px;
+	    left: 0px;
+	    position: absolute;
+	    content: " ";
+	    width: calc(100% + 1px);
+	    height: calc(100% + 0.5px);
+	    border: thin solid #fff;
+	    z-index: -1;
+	}
+}
+.floating-msg {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 9999;
+	background: @mainBg;
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
